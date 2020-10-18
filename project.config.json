@@ -9,7 +9,16 @@
 		"newFeature": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
-		"useCompilerModule": false
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx5d3d4d8c543d2653",
 	"projectname": "Test_MetroRobot",
