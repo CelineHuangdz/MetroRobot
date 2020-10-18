@@ -1,0 +1,86 @@
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.metro-picture{
+
+}
+
+.uploader{
+  margin-top: 40rpx;
+  height: auto;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease;
+  padding: 0 0 0 40rpx;
+  box-sizing: border-box;
+  border-radius: 98rpx; 
+}
+
+.metro-avatar {
+  width: 1000rpx;
+  height: 200rpx;
+  margin: 20rpx;
+  /***border-radius: 50%;***/
+  background-size: cover;
+  background-color: white;
+}
+
+.uploader-text{
+  width: 100%;
+  line-height: 52px;
+  font-size: 50rpx;
+  color: #000000;
+}
+
+.self-check-buttons {
+  width: 100%;
+  height: 450rpx;
+  padding: 20rpx 20rpx 20rpx 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.self-check-button {
+  width: 150rpx;
+  height: 200rpx;
+}
+
+.btnImg {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.fast-answer-list{
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+.problem-item {
+  width: 100%;
+  height: 100rpx;
+}
+
+.ProblemText {
+  color: rgb(32, 27, 27);
+  font-size: 35rpx;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}

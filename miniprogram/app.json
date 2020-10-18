@@ -1,6 +1,6 @@
 {
         "pages": [
-                "pages/index/index",
+                "pages/MainPage-Self-Check/Self-Check",
                 "pages/userConsole/userConsole",
                 "pages/storageConsole/storageConsole",
                 "pages/databaseGuide/databaseGuide",
@@ -13,7 +13,7 @@
                 "backgroundColor": "#F6F6F6",
                 "backgroundTextStyle": "light",
                 "navigationBarBackgroundColor": "#F6F6F6",
-                "navigationBarTitleText": "云开发 QuickStart",
+                "navigationBarTitleText": "地铁智能客服",
                 "navigationBarTextStyle": "black"
         },
         "sitemapLocation": "sitemap.json"

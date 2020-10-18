@@ -1,0 +1,94 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- metro.jpg -->
+  <view class="metro-picture">
+    <view class="metro-avatar" style="background-image: url({{avatarUrl}})"></view>
+  </view>
+
+
+  <!-- 自助查询 -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>自助查询</text>
+    </view>
+    <view class="self-check-buttons">
+      <view>
+        <button class="self-check-button" open-type='btn1'>
+          <image class='btnImg' src='./test.jpg'></image>
+          <view>按钮1</view>
+        </button>
+      </view>
+      <view>
+        <button class="self-check-button">
+          <image class='btnImg' src='./test.jpg'></image>
+          <view>按钮2</view>v
+        </button>
+      </view>
+      <view>
+        <button class="self-check-button">
+          <image class='btnImg' src='./test.jpg'></image>
+          <view>按钮3</view>
+        </button>
+      </view>
+      <view>
+        <button class="self-check-button">
+          <image class='btnImg' src='./test.jpg'></image>
+          <view>按钮4</view>
+        </button>
+      </view>
+      <view>
+        <button class="self-check-button">
+          <image class='btnImg' src='./test.jpg'></image>
+          <view>按钮5</view>
+        </button>
+      </view>
+      <view>
+        <button class="self-check-button">
+          <image class='btnImg' src='./test.jpg'></image>
+          <view>按钮6</view>
+        </button>
+      </view>
+      <view>
+        <button class="self-check-button">
+          <image class='btnImg' src='./test.jpg'></image>
+          <view>按钮7</view>
+        </button>
+      </view>
+      <view>
+        <button class="self-check-button">
+          <image class='btnImg' src='./test.jpg'></image>
+          <view>按钮8</view>
+        </button>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 猜你想问 -->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>猜你想问</text>
+    </view>
+    <view class="fast-answer-list">
+      <block wx:for="{{problem_items}}">
+        <!-- 每个cell -->
+        <view class='problem-item' wx:key="{{item.ID}}" data-item="{{item}}" data-id="{{item.ID}}">
+
+          <!-- 问题 -->
+          <view class='ProblemView'>
+            <text class='ProblemText'>{{item.Problem}}</text>
+          </view>
+
+          <!-- 箭头 >
+          <view class='iconImageView'>
+            <image class='iconImage' src='./test.jpg' mode='aspectFit'></image>
+          </view-->
+
+        </view>
+      </block>
+    </view>
+  </view>
+
+
+</view>
