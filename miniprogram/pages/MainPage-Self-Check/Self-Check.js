@@ -3,8 +3,24 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: './metro.jpg',
-    problem_items: ["问题1","问题2"],
+    avatarUrl: '../../images/metro.jpg',
+    problem_items: [
+      {
+        id:0,
+        problem_name:"问题1",
+        pages:[]
+      },
+      {
+        id:1,
+        problem_name:"问题2",
+        pages:[]
+      },
+      {
+        id:2,
+        problem_name:"问题3",
+        pages:[]
+      }
+    ],
     logged: false,
     takeSession: false,
     requestResult: ''

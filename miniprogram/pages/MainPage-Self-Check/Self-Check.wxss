@@ -23,7 +23,9 @@ page {
   flex-direction: column;
   align-items: center;
   transition: all 300ms ease;
-  padding: 0 0 0 40rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 40rpx;
   box-sizing: border-box;
   border-radius: 98rpx; 
 }
@@ -41,6 +43,7 @@ page {
   width: 100%;
   line-height: 52px;
   font-size: 50rpx;
+  padding-left: 30rpx;
   color: #000000;
 }
 
@@ -68,19 +71,25 @@ page {
 }
 
 .fast-answer-list{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
-  bottom: 0;
-  position: absolute;
 }
 
 .problem-item {
   width: 100%;
-  height: 100rpx;
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  height: auto;
+}
+
+.ProblemView {
+  width: 100%;
+  height: auto;
 }
 
 .ProblemText {
   color: rgb(32, 27, 27);
-  font-size: 35rpx;
-  white-space: nowrap;
-  text-overflow:ellipsis;
+  font-size: 40rpx;
+  flex: 1;
 }

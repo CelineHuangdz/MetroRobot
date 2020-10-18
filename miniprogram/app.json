@@ -1,20 +1,14 @@
 {
-        "pages": [
-                "pages/MainPage-Self-Check/Self-Check",
-                "pages/userConsole/userConsole",
-                "pages/storageConsole/storageConsole",
-                "pages/databaseGuide/databaseGuide",
-                "pages/addFunction/addFunction",
-                "pages/deployFunctions/deployFunctions",
-                "pages/chooseLib/chooseLib",
-                "pages/openapi/openapi"
-        ],
-        "window": {
-                "backgroundColor": "#F6F6F6",
-                "backgroundTextStyle": "light",
-                "navigationBarBackgroundColor": "#F6F6F6",
-                "navigationBarTitleText": "地铁智能客服",
-                "navigationBarTextStyle": "black"
-        },
-        "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/MainPage-Self-Check/Self-Check",
+    "pages/MainPage-Robot/robot"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "地铁智能客服",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
 }

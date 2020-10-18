@@ -6,7 +6,10 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"useCompilerModule": false
 	},
 	"appid": "wx5d3d4d8c543d2653",
 	"projectname": "Test_MetroRobot",

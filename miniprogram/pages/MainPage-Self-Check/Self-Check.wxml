@@ -15,49 +15,49 @@
     <view class="self-check-buttons">
       <view>
         <button class="self-check-button" open-type='btn1'>
-          <image class='btnImg' src='./test.jpg'></image>
+          <image class='btnImg' src='../../images/test.jpg'></image>
           <view>按钮1</view>
         </button>
       </view>
       <view>
         <button class="self-check-button">
-          <image class='btnImg' src='./test.jpg'></image>
+          <image class='btnImg' src='../../images/test.jpg'></image>
           <view>按钮2</view>v
         </button>
       </view>
       <view>
         <button class="self-check-button">
-          <image class='btnImg' src='./test.jpg'></image>
+          <image class='btnImg' src='../../images/test.jpg'></image>
           <view>按钮3</view>
         </button>
       </view>
       <view>
         <button class="self-check-button">
-          <image class='btnImg' src='./test.jpg'></image>
+          <image class='btnImg' src='../../images/test.jpg'></image>
           <view>按钮4</view>
         </button>
       </view>
       <view>
         <button class="self-check-button">
-          <image class='btnImg' src='./test.jpg'></image>
+          <image class='btnImg' src='../../images/test.jpg'></image>
           <view>按钮5</view>
         </button>
       </view>
       <view>
         <button class="self-check-button">
-          <image class='btnImg' src='./test.jpg'></image>
+          <image class='btnImg' src='../../images/test.jpg'></image>
           <view>按钮6</view>
         </button>
       </view>
       <view>
         <button class="self-check-button">
-          <image class='btnImg' src='./test.jpg'></image>
+          <image class='btnImg' src='../../images/test.jpg'></image>
           <view>按钮7</view>
         </button>
       </view>
       <view>
         <button class="self-check-button">
-          <image class='btnImg' src='./test.jpg'></image>
+          <image class='btnImg' src='../../images/test.jpg'></image>
           <view>按钮8</view>
         </button>
       </view>
@@ -73,11 +73,11 @@
     <view class="fast-answer-list">
       <block wx:for="{{problem_items}}">
         <!-- 每个cell -->
-        <view class='problem-item' wx:key="{{item.ID}}" data-item="{{item}}" data-id="{{item.ID}}">
+        <view class='problem-item' wx:key="{{item.id}}">
 
           <!-- 问题 -->
           <view class='ProblemView'>
-            <text class='ProblemText'>{{item.Problem}}</text>
+            <text class='ProblemText'>{{item.problem_name}}</text>
           </view>
 
           <!-- 箭头 >
