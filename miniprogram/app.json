@@ -12,5 +12,19 @@
     "navigationBarTitleText": "地铁智能客服",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "list": [{
+      "pagePath": "pages/MainPage-Self-Check/Self-Check",
+      "text": "自助查询",
+      "iconPath": "images/self-check.png",
+      "selectedIconPath": "images/self-check_selected.png"
+    },
+    {
+      "pagePath": "pages/MainPage-Robot/robot",
+      "text": "智能客服",
+      "iconPath": "images/robot.png",
+      "selectedIconPath": "images/robot_selected.png"
+    }]
+  }
 }
