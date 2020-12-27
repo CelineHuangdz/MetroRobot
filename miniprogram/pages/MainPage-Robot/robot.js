@@ -139,5 +139,28 @@ Page({
 
   toBackClick: function() {
     wx.navigateBack({})
+  },
+
+  testConnect: function(){
+    wx.request({
+          url: 'http://localhost:5000/sendQA',
+          data: {
+              question:JSON.stringify(this.data.question)
+  //this.data.question为用户输入的问句，字符串类型
+          },
+          method: "POST",
+          header: {
+              'content-type': 'application/x-www-form-urlencoded',
+              'chartset': 'utf-8'
+          },
+          success: function (res) {
+              console.log(res.data);
+             wx.showToast({
+                 title: res.data,//这里打印出登录成功
+                 duration: 1000
+           });
+          }
+        })
   }
+
 })
