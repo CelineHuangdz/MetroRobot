@@ -39,10 +39,10 @@ input {
 
 .rightMsg {
   font-size: 35rpx;
-  color: #444;
+  color: #fff;
   line-height: 7vw;
   padding: 2vw 2.5vw;
-  background-color: #96EB6A;
+  background-color: #444;
   margin-right: -1.6vw;
   border-radius: 10rpx;
   z-index: 10;

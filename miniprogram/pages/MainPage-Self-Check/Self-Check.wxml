@@ -1,94 +1,69 @@
 <!--index.wxml-->
 <view class="container">
 
-  <!-- metro.jpg -->
-  <view class="metro-picture">
-    <view class="metro-avatar" style="background-image: url({{avatarUrl}})"></view>
-  </view>
+	<!-- metro.jpg -->
+	<view class="metro-picture">
+		<view class="metro-avatar" style="background-image: url({{avatarUrl}})"></view>
+	</view>
+
+	<!-- 自助查询 -->
+	<view class="uploader">
+		<view class="uploader-text" bindtap="doUpload">
+			<text>自助查询</text>
+		</view>
+		<view class="self-check-buttons">
+			<view class="button-view">
+				<button class="button">客流</button>
+			</view>
+			<view class="button-view">
+				<button class="button">天气</button>
+			</view>
+			<view class="button-view">
+				<button class="button">路线</button>
+			</view>
+			<view class="button-view">
+				<button class="button">周边</button>
+			</view>
+			<view class="button-view">
+				<button class="button">票价</button>
+			</view>
+			<view class="button-view">
+				<button class="button">设置</button>
+			</view>
+			<view class="button-view">
+				<button class="button">规章</button>
+			</view>
+			<view class="button-view">
+				<button class="button">票务</button>
+			</view>
+		</view>
+	</view>
 
 
-  <!-- 自助查询 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>自助查询</text>
-    </view>
-    <view class="self-check-buttons">
-      <view>
-        <button class="self-check-button" open-type='btn1'>
-          <image class='btnImg' src='../../images/test.jpg'></image>
-          <view>按钮1</view>
-        </button>
-      </view>
-      <view>
-        <button class="self-check-button">
-          <image class='btnImg' src='../../images/test.jpg'></image>
-          <view>按钮2</view>v
-        </button>
-      </view>
-      <view>
-        <button class="self-check-button">
-          <image class='btnImg' src='../../images/test.jpg'></image>
-          <view>按钮3</view>
-        </button>
-      </view>
-      <view>
-        <button class="self-check-button">
-          <image class='btnImg' src='../../images/test.jpg'></image>
-          <view>按钮4</view>
-        </button>
-      </view>
-      <view>
-        <button class="self-check-button">
-          <image class='btnImg' src='../../images/test.jpg'></image>
-          <view>按钮5</view>
-        </button>
-      </view>
-      <view>
-        <button class="self-check-button">
-          <image class='btnImg' src='../../images/test.jpg'></image>
-          <view>按钮6</view>
-        </button>
-      </view>
-      <view>
-        <button class="self-check-button">
-          <image class='btnImg' src='../../images/test.jpg'></image>
-          <view>按钮7</view>
-        </button>
-      </view>
-      <view>
-        <button class="self-check-button">
-          <image class='btnImg' src='../../images/test.jpg'></image>
-          <view>按钮8</view>
-        </button>
-      </view>
-    </view>
-  </view>
+	<!-- 猜你想问 -->
+	<view class="uploader">
+		<view class="uploader-text" bindtap="doUpload">
+			<text>猜你想问</text>
+		</view>
+		<view class="fast-answer-list">
+			<block wx:for="{{problem_items}}">
+				<!-- 每个cell -->
+				<view class='problem-item' wx:key="{{item.id}}">
 
+					<!-- 问题 -->
+					<view class='ProblemView'>
+						<text class='ProblemText'>{{item.problem_name}}</text>
+					</view>
 
-  <!-- 猜你想问 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>猜你想问</text>
-    </view>
-    <view class="fast-answer-list">
-      <block wx:for="{{problem_items}}">
-        <!-- 每个cell -->
-        <view class='problem-item' wx:key="{{item.id}}">
-
-          <!-- 问题 -->
-          <view class='ProblemView'>
-            <text class='ProblemText'>{{item.problem_name}}</text>
-          </view>
-
-          <!-- 箭头 >
+					<!-- 箭头 >
           <view class='iconImageView'>
             <image class='iconImage' src='./test.jpg' mode='aspectFit'></image>
           </view-->
 
-        </view>
-      </block>
-    </view>
-  </view>
+				</view>
+			</block>
+		</view>
+	</view>
 
 
 </view>

@@ -1,33 +1,10 @@
 /**index.wxss**/
 
 page {
-  background: #f6f6f6;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.metro-picture{
-
-}
-
-.uploader{
-  margin-top: 40rpx;
-  height: auto;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 300ms ease;
-  padding-left: 20rpx;
-  padding-right: 20rpx;
-  padding-bottom: 40rpx;
-  box-sizing: border-box;
-  border-radius: 98rpx; 
 }
 
 .metro-avatar {
@@ -39,39 +16,49 @@ page {
   background-color: white;
 }
 
+.uploader{
+  margin-top: 40rpx;
+  height: auto;
+  width: 100%;
+  background: #176193d0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 40rpx;
+  box-sizing: border-box;
+  border-radius: 98rpx; 
+}
+
 .uploader-text{
   width: 100%;
   line-height: 52px;
   font-size: 50rpx;
   padding-left: 30rpx;
-  color: #000000;
+  color: #f2f2f2;
 }
 
 .self-check-buttons {
-  width: 100%;
-  height: 450rpx;
-  padding: 20rpx 20rpx 20rpx 0;
+  border-top: 1px solid #e4e4e4;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.self-check-button {
-  width: 150rpx;
-  height: 200rpx;
+.button-view{
+  margin-top: 10px;
+  margin-right: 8px;
 }
 
-.btnImg {
-  width: 60rpx;
-  height: 60rpx;
+.button{
+  color: #eeeeee;
 }
 
 .fast-answer-list{
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #e4e4e4;
   width: 100%;
 }
 
@@ -89,7 +76,7 @@ page {
 }
 
 .ProblemText {
-  color: rgb(32, 27, 27);
+  color: #eeeeee;
   font-size: 40rpx;
   flex: 1;
 }

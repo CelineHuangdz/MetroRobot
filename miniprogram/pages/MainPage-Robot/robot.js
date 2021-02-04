@@ -5,6 +5,7 @@ var msgList = [];
 var windowWidth = wx.getSystemInfoSync().windowWidth;
 var windowHeight = wx.getSystemInfoSync().windowHeight;
 var keyHeight = 0;
+var contentLabel = ['LOC','FAC','LIN','SEC','RUL','TIC','SUR'];
 
 function initData(that) {
   inputVal = '';
@@ -12,12 +13,8 @@ function initData(that) {
   msgList = [{
       speaker: 'server',
       contentType: 'text',
+      contentLabel: 'welcome',
       content: '欢迎来到地铁智能客服！'
-    },
-    {
-      speaker: 'customer',
-      contentType: 'text',
-      content: '你好'
     }
   ]
   that.setData({
@@ -41,9 +38,9 @@ Page({
    */
   onLoad: function (options) {
     initData(this);
-    this.setData({
-      cusHeadIcon: app.globalData.userInfo.avatarUrl,
-    });
+    //this.setData({
+    //  cusHeadIcon: app.globalData.userInfo.avatarUrl,
+    //});
   },
 
   /**
@@ -135,9 +132,38 @@ Page({
       msgList,
       inputVal
     });
+
+    wx.request({
+      url: 'http://124.70.204.224:5000/sendQA',
+      data: {
+          question:JSON.stringify(e.detail.value)
+//this.data.question为用户输入的问句，字符串类型
+      },
+      method: "POST",
+      header: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'chartset': 'utf-8'
+      },
+      success: res => {
+        console.log(res.data);
+        /*
+        msgList.push({
+          speaker: 'server',
+          contentType: 'text',
+          content: 'hello'
+        })
+        this.setData({
+          msgList,
+          inputVal
+        });
+        */
+      }
+    })
+
   },
 
   toBackClick: function() {
     wx.navigateBack({})
   }
+
 })
