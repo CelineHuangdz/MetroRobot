@@ -1,1 +1,27 @@
-/* miniprogram/pages/Self-TicketPrice/TicketPrice.wxss */
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+
+.section{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+}
+.section view{
+  margin-right: 20rpx;
+}
+.btn-area{
+  margin: 20rpx;
+}
+button{
+  margin: 10rpx 0;
+}
+
+.moto-container{
+  border:1px solid #405f80;
+  width:200rpx;
+  height:80rpx;
+  border-radius:5rpx;
+  text-align:center;
+  }

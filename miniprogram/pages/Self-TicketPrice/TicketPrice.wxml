@@ -1,2 +1,62 @@
-<!--miniprogram/pages/Self-TicketPrice/TicketPrice.wxml-->
-<text>miniprogram/pages/Self-TicketPrice/TicketPrice.wxml</text>
+<view class="wrapper">
+
+  <view class="header">
+    <text class="header-title"> 票价查询 </text>
+  </view>
+
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class="section">
+    <view class="section__title">当前地址：</view>
+    <input name="phone" placeholder="" />
+  </view>
+  <view class="section">
+    <view class="section__title">目的地：</view>
+    <input name="pwd" placeholder="" password/>
+  </view>
+
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>
+
+  <view>
+    <text> 地图： </text>
+  </view>
+
+  <view class="" hover-class="none" hover-stop-propagation="false" style="width: 100%; height: 100%;">
+    <map id="map" longitude="{{longitude}}" latitude=" {{latitude}}" markers="{{markers}}" scale="15" show-location
+      style="width: 100%; height: 100%;"></map>
+  </view>
+
+  <view class="main">
+    <view class="canvas-container">
+      <view animation="{{animationData}}" class="canvas-content">
+        <canvas style="width: 300px; height: 300px;" class="canvas-element" canvas-id="lotteryCanvas"></canvas>
+
+        <view class="canvas-line">
+          <view class="canvas-litem" wx:for="{{awardsList}}" wx:key="unique"
+            style="-webkit-transform: rotate({{item.lineTurn}});transform: rotate({{item.lineTurn}})"></view>
+        </view>
+
+        <view class="canvas-list">
+          <view class="canvas-item" wx:for="{{awardsList}}" wx:key="unique">
+            <view class="canvas-item-text"
+              style="-webkit-transform: rotate({{item.turn}});transform: rotate({{item.turn}})">{{item.award}}</view>
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+
+    <view class="main-container">
+      <view class="main-container-btn">
+        <button bindtap="gotoList" type="primary">查看票价</button>
+      </view>
+    </view>
+
+  </view>
+
+</view>
