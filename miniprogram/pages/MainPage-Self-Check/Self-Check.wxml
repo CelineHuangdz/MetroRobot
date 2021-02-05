@@ -13,28 +13,28 @@
 		</view>
 		<view class="self-check-buttons">
 			<view class="button-view">
-				<button class="button">客流</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '客流情况'>客流情况</button>
 			</view>
 			<view class="button-view">
-				<button class="button">天气</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '天气预报'>天气预报</button>
 			</view>
 			<view class="button-view">
-				<button class="button">路线</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '路线规划'>路线规划</button>
 			</view>
 			<view class="button-view">
-				<button class="button">周边</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '周边查询'>周边查询</button>
 			</view>
 			<view class="button-view">
-				<button class="button">票价</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '票务票价'>票务票价</button>
 			</view>
 			<view class="button-view">
-				<button class="button">设置</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '公共设施'>公共设施</button>
 			</view>
 			<view class="button-view">
-				<button class="button">规章</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '规章制度'>规章制度</button>
 			</view>
 			<view class="button-view">
-				<button class="button">票务</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '首末班车'>首末班车</button>
 			</view>
 		</view>
 	</view>
@@ -54,11 +54,6 @@
 					<view class='ProblemView'>
 						<text class='ProblemText'>{{item.problem_name}}</text>
 					</view>
-
-					<!-- 箭头 >
-          <view class='iconImageView'>
-            <image class='iconImage' src='./test.jpg' mode='aspectFit'></image>
-          </view-->
 
 				</view>
 			</block>

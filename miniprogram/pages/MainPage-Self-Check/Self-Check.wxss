@@ -30,7 +30,7 @@ page {
   padding-right: 20rpx;
   padding-bottom: 40rpx;
   box-sizing: border-box;
-  border-radius: 98rpx; 
+  border-radius: 90rpx; 
 }
 
 .uploader-text{
@@ -55,6 +55,10 @@ page {
 
 .button{
   color: #eeeeee;
+}
+
+.button-hover{
+  background-color: #72a9c2;
 }
 
 .fast-answer-list{
