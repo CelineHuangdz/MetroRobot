@@ -4,14 +4,19 @@
     "pages/MainPage-Robot/robot",
     "pages/Self-TicketPrice/TicketPrice",
     "pages/Self-First_Last-Train/First_Last-Train",
-    "pages/Self-PassengerFlow/PassengerFlow"
+    "pages/Self-PassengerFlow/PassengerFlow",
+    "pages/Self-Weather/Weather",
+    "pages/Self-Path_Planning/Path_Planning",
+    "pages/Self-Around/Around",
+    "pages/Self-Public_Facilities/Public_Facilities",
+    "pages/Self-Regulations/Regulations"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#24ccff",
+    "navigationBarBackgroundColor": "#176193",
     "navigationBarTitleText": "地铁智能客服",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

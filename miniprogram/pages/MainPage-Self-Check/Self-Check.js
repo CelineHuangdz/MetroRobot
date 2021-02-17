@@ -4,6 +4,11 @@ var buttonList = new Array();
 buttonList["首末班车"] = "First_Last-Train";
 buttonList["票务票价"] = "TicketPrice";
 buttonList["客流情况"] = "PassengerFlow";
+buttonList["天气预报"] = "Weather";
+buttonList["路线规划"] = "Path_Planning";
+buttonList["周边查询"] = "Around";
+buttonList["公共设施"] = "Public_Facilities";
+buttonList["规章制度"] = "Regulations";
 
 function initData(that) {
   

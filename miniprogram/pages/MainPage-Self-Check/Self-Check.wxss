@@ -52,7 +52,7 @@ page {
 
 .button-view{
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 30px;
   display:flex;
   text-align: center;
   align-items:center;
@@ -61,7 +61,10 @@ page {
 .button-image{
   width: 30px;
   height: 30px;
-  
+}
+
+.button-text{
+  font-size: 40rpx;
 }
 
 .button{
