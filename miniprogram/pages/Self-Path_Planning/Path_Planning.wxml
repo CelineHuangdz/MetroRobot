@@ -1,2 +1,12 @@
 <!--miniprogram/pages/Self-Path_Planning/Path_Planning.wxml-->
-<text>miniprogram/pages/Self-Path_Planning/Path_Planning.wxml</text>
+<view class="container">
+	<!--定义页面结构，使用文本组件或其他组件 -->
+	<view class='title-view'>
+		<text>路线规划</text>
+	</view>
+
+  <view class="divLine"></view>
+
+	
+
+</view>

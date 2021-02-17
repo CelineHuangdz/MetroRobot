@@ -16,7 +16,7 @@ function initData(that) {
 
 Page({
   data: {
-    avatarUrl: '../../images/metro.jpg',
+    avatarUrl: '../../images/metro.png',
     problem_items: [
       {
         id:0,
