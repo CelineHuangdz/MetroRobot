@@ -29,6 +29,24 @@ Page({
 
   },
 
+  gotoSHMetro: function(e){
+    const url = "";
+    wx.navigateTo({
+      url: url, 
+      success:function() {
+        console.log("success");
+      },//成功后的回调；
+
+      fail:function() {
+        console.log("fail");
+       },//失败后的回调；
+
+      complete:function() {
+
+       }//结束后的回调(成功，失败都会执行)
+    })
+  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

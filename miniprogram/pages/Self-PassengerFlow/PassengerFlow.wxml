@@ -1,2 +1,13 @@
 <!--miniprogram/pages/Self-PassengerFlow/PassengerFlow.wxml-->
-<text>miniprogram/pages/Self-PassengerFlow/PassengerFlow.wxml</text>
+
+<view class='container'>
+  
+  <view class='title'>
+    <text>客流情况</text>
+  </view>
+  
+  <button class="button" hover-class='button-hover' bindtap = 'gotoSHMetro' data-text = '官网'>
+		<text class='button-text'>跳转到官网</text>
+	</button>
+</view>
+

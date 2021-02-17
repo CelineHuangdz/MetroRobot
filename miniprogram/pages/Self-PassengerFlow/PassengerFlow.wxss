@@ -1,1 +1,7 @@
 /* miniprogram/pages/Self-PassengerFlow/PassengerFlow.wxss */
+
+page {
+  background: #f1f1f1;
+}
+
+

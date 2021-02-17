@@ -18,6 +18,11 @@
     "navigationBarTitleText": "地铁智能客服",
     "navigationBarTextStyle": "white"
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于定位效果和天气信息展示"
+    }
+  },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [

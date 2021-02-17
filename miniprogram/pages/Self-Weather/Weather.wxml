@@ -1,2 +1,49 @@
 <!--miniprogram/pages/Self-Weather/Self-Weather.wxml-->
-<text>miniprogram/pages/Self-Weather/Self-Weather.wxml</text>
+<view class="container">
+	<!--定义页面结构，使用文本组件或其他组件 -->
+	<view class='title-view'>
+		<text>天气预报</text>
+	</view>
+
+  <view class="divLine"></view>
+
+	<view class="weather-view">
+		<view class="city-view">
+			<text class='text-class'>{{weather.city.text}}</text>
+			<text class='data-class'>{{weather.city.data}}</text>
+		</view>
+
+    <view class="city-view">
+			<text class='text-class'>{{weather.humidity.text}}</text>
+			<text class='data-class'>{{weather.humidity.data}}</text>
+		</view>
+
+    <view class="city-view">
+			<text class='text-class'>{{weather.temperature.text}}</text>
+			<text class='data-class'>{{weather.temperature.data}}</text>
+		</view>
+
+    <view class="city-view">
+			<text class='text-class'>{{weather.weather.text}}</text>
+			<text class='data-class'>{{weather.weather.data}}</text>
+		</view>
+
+    <view class="city-view">
+			<text class='text-class'>{{weather.winddirection.text}}</text>
+			<text class='data-class'>{{weather.winddirection.data}}</text>
+		</view>
+
+    <view class="city-view">
+			<text class='text-class'>{{weather.windpower.text}}</text>
+			<text class='data-class'>{{weather.windpower.data}}</text>
+		</view>
+
+    <view class="city-view">
+			<text class='data-class'>{{weather.liveData.reporttime}}</text>
+		</view>
+
+	</view>
+
+  
+
+</view>

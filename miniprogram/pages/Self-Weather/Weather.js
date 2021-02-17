@@ -1,18 +1,36 @@
 // miniprogram/pages/Self-Weather/Self-Weather.js
+
+var amapFile = require('../../libs/amap-wx');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    weather:{}
 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function() {
+    var that = this;
+    var myAmapFun = new amapFile.AMapWX({key:'fe66bfdd0a6edc6712d6794dd806de84'});
+    myAmapFun.getWeather({
+      success: function(data){
+        that.setData({
+          weather: data
+        });
+        console.log(data)
+        //成功回调
+      },
+      fail: function(info){
+        //失败回调
+        console.log(info)
+      }
+    })
   },
 
   /**
