@@ -3,6 +3,7 @@ const app = getApp()
 var buttonList = new Array(); 
 buttonList["首末班车"] = "First_Last-Train";
 buttonList["票务票价"] = "TicketPrice";
+buttonList["客流情况"] = "PassengerFlow";
 
 function initData(that) {
   

@@ -3,7 +3,8 @@
     "pages/MainPage-Self-Check/Self-Check",
     "pages/MainPage-Robot/robot",
     "pages/Self-TicketPrice/TicketPrice",
-    "pages/Self-First_Last-Train/First_Last-Train"
+    "pages/Self-First_Last-Train/First_Last-Train",
+    "pages/Self-PassengerFlow/PassengerFlow"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -13,18 +14,20 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "tabBar":{
-    "list": [{
-      "pagePath": "pages/MainPage-Self-Check/Self-Check",
-      "text": "自助查询",
-      "iconPath": "images/self-check.png",
-      "selectedIconPath": "images/self-check_selected.png"
-    },
-    {
-      "pagePath": "pages/MainPage-Robot/robot",
-      "text": "智能客服",
-      "iconPath": "images/robot.png",
-      "selectedIconPath": "images/robot_selected.png"
-    }]
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/MainPage-Self-Check/Self-Check",
+        "text": "自助查询",
+        "iconPath": "images/self-check.png",
+        "selectedIconPath": "images/self-check_selected.png"
+      },
+      {
+        "pagePath": "pages/MainPage-Robot/robot",
+        "text": "智能客服",
+        "iconPath": "images/robot.png",
+        "selectedIconPath": "images/robot_selected.png"
+      }
+    ]
   }
 }

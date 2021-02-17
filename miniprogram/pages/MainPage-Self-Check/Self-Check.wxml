@@ -13,28 +13,52 @@
 		</view>
 		<view class="self-check-buttons">
 			<view class="button-view">
-				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '客流情况'>客流情况</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '客流情况'>
+					<image class='button-image' src='../../images/passenger_flow.png'></image>
+					<text>客流情况</text>
+				</button>
 			</view>
 			<view class="button-view">
-				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '天气预报'>天气预报</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '天气预报'>
+					<image class='button-image' src='../../images/weather.png'></image>
+					<text>天气预报</text>
+				</button>
 			</view>
 			<view class="button-view">
-				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '路线规划'>路线规划</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '路线规划'>
+					<image class='button-image' src='../../images/path.png'></image>
+					<text>路线规划</text>
+				</button>
 			</view>
 			<view class="button-view">
-				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '周边查询'>周边查询</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '周边查询'>
+					<image class='button-image' src='../../images/around.png'></image>
+					<text>周边查询</text>
+				</button>
 			</view>
 			<view class="button-view">
-				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '票务票价'>票务票价</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '票务票价'>
+					<image class='button-image' src='../../images/ticket.png'></image>
+					<text>票务票价</text>
+				</button>
 			</view>
 			<view class="button-view">
-				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '公共设施'>公共设施</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '公共设施'>
+					<image class='button-image' src='../../images/facilities.png'></image>
+					<text>公共设施</text>
+				</button>
 			</view>
 			<view class="button-view">
-				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '规章制度'>规章制度</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '规章制度'>
+					<image class='button-image' src='../../images/regulations.png'></image>
+					<text>规章制度</text>
+				</button>
 			</view>
 			<view class="button-view">
-				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '首末班车'>首末班车</button>
+				<button class="button" hover-class='button-hover' bindtap = 'gotoPage' data-text = '首末班车'>
+					<image class='button-image' src='../../images/train.png'></image>
+					<text>首末班车</text>
+				</button>
 			</view>
 		</view>
 	</view>
