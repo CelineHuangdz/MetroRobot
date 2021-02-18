@@ -23,5 +23,5 @@
 <view class="text_box {{detailStatus ? '' : 'map-hide'}}">
   <view class="text">路程：{{distance}}米</view>
   <view class="text">耗时：{{cost}}分钟</view>
-  <view class="detail_button" bindtouchstart="goDetail">详情</view>
+  <!--view class="detail_button" bindtouchstart="goDetail">详情</view-->
 </view>
