@@ -51,7 +51,22 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userLocation']) {
+          // 已经授权
+          console.log("已经授权地址信息")
+        }else{
+          // 未授权，跳转到授权页面
+          console.log("还没有授权地址信息")
+          /*
+          wx.reLaunch({
+            url: '/pages/auth/auth',
+          })
+          */
+        }
+      }
+    })
   },
 
   /**
