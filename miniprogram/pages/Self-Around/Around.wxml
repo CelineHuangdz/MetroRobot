@@ -1,2 +1,12 @@
 <!--miniprogram/pages/Self-Around/Around.wxml-->
-<text>miniprogram/pages/Self-Around/Around.wxml</text>
+<view class="container">
+	<!--定义页面结构，使用文本组件或其他组件 -->
+	<view class='title-view'>
+		<text>周边查询</text>
+	</view>
+
+  <view class="divLine"></view>
+
+	
+
+</view>

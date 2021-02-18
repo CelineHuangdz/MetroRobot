@@ -1,8 +1,10 @@
-<view class="wrapper">
+<view class="container">
 
-  <view class="header">
-    <text class="header-title"> 票价查询 </text>
-  </view>
+  <view class='title-view'>
+		<text>规章制度</text>
+	</view>
+
+  <view class="divLine"></view>
 
   <form bindsubmit="formSubmit" bindreset="formReset">
 

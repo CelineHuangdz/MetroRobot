@@ -1,2 +1,12 @@
 <!--miniprogram/pages/Self-Regulations/Regulations.wxml-->
-<text>miniprogram/pages/Self-Regulations/Regulations.wxml</text>
+<view class="container">
+	<!--定义页面结构，使用文本组件或其他组件 -->
+	<view class='title-view'>
+		<text>规章制度</text>
+	</view>
+
+  <view class="divLine"></view>
+
+	
+
+</view>

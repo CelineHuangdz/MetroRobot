@@ -1,2 +1,12 @@
 <!--miniprogram/pages/Self-Public_Facilities/Public_Facilities.wxml-->
-<text>miniprogram/pages/Self-Public_Facilities/Public_Facilities.wxml</text>
+<view class="container">
+	<!--定义页面结构，使用文本组件或其他组件 -->
+	<view class='title-view'>
+		<text>公共设施</text>
+	</view>
+
+  <view class="divLine"></view>
+
+	
+
+</view>
