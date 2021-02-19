@@ -56,6 +56,8 @@ Page({
         if (res.authSetting['scope.userLocation']) {
           // 已经授权
           console.log("已经授权地址信息")
+          var that = this
+          that.onload()
         }else{
           // 未授权，跳转到授权页面
           console.log("还没有授权地址信息")
