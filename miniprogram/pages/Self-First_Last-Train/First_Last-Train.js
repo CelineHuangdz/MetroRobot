@@ -56,7 +56,7 @@ Page({
     start_line_select: false,
     start_line_name: '--选择线路--',
     start_station_name: '--选择站点--',
-    lines: ['一号线', '二号线', '三号线', '四号线', '五号线', '六号线', '七号线', '八号线', '九号线', '十号线', '十一号线'],
+    lines: ['一号线', '二号线', '三号线', '四号线', '五号线', '六号线', '七号线', '八号线', '九号线', '十号线', '十一号线', '十二号线', '十三号线', '十五号线', '十六号线', '十七号线', '十八号线', '浦江线'],
     result: ""
   },
 
@@ -171,7 +171,7 @@ Page({
     console.log(e)
     var name = e.currentTarget.dataset.name 
     var find_stations = []
-    for(let i =0; i<=9; i++){
+    for(let i =0; i<=18; i++){
         if(name == allState[i].line_name){
           find_stations = allState[i].stations;
           break;

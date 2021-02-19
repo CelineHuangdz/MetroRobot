@@ -28,7 +28,7 @@
        <image class="input-image" src='../../images/input.png'></image>
        <!-- 下拉需要显示的列表 -->
        <view class="select_box" wx:if="{{start_station_select}}">
-         <view wx:for="{{stations}}" wx:key="unique">
+         <view wx:for="{{start_stations}}" wx:key="unique">
             <view class="select_one" catchtap="mySelectStartStation" data-name="{{item}}">{{item}}</view>
           </view>
         </view>
@@ -57,7 +57,7 @@
        <image class="input-image" src='../../images/input.png'></image>
        <!-- 下拉需要显示的列表 -->
        <view class="select_box" wx:if="{{end_station_select}}">
-         <view wx:for="{{stations}}" wx:key="unique">
+         <view wx:for="{{end_stations}}" wx:key="unique">
             <view class="select_one" catchtap="mySelectEndStation" data-name="{{item}}">{{item}}</view>
           </view>
         </view>
