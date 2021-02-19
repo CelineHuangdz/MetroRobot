@@ -19,11 +19,11 @@ var allState = [
 ]
 
 var station_map = (wx.getStorageSync('station_map') || {})
+wx.setStorageSync('allState', allState)
 
 Page({
 
   data: {
-    DqOpenid: '',
     start_line_select: false,
     start_station_select: false,
     start_line_name: '--选择线路--',
