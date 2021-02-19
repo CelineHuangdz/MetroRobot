@@ -26,7 +26,7 @@ page{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 30rpx;
+  margin-top: 40rpx;
   font-size: 20px;
   color: #fff;
 }
@@ -77,6 +77,45 @@ page{
   position: relatiave;
   line-height: 60rpx;
   border-bottom: 1px solid #ccc;
+}
+
+.button-view{
+  background-color: #176193d0;
+  display: flex;
+  justify-content: center;
+  margin-top: 40rpx;
+  border-radius: 30rpx; 
+  
+}
+
+.button{
+  color: #fff;
+  font-size: 20px;
+}
+
+.button-hover{
+  background-color: #72a9c2;
+  border-radius: 30rpx; 
+}
+
+.price-view{
+  display: flex;
+  margin-top: 40rpx;
+  align-items: center;
+  justify-content: center; 
+}
+
+.other-text{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.price-text{
+  font-weight: bold;
+  font-size: 50px;
+  color: red;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
 }
 
  

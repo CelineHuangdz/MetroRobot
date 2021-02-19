@@ -41,30 +41,44 @@
       <view style="font-weight:bold;">终点:</view>
 
     <!-- 下拉框 -->
-     <view class='start-line' bindtap='bindShowMsgStartLine'>
+     <view class='start-line' bindtap='bindShowMsgEndLine'>
         <text style="margin-left: 10rpx;margin-right: 10rpx;">{{end_line_name}}</text>
        <image class="input-image" src='../../images/input.png'></image>
        <!-- 下拉需要显示的列表 -->
         <view class="select_box" wx:if="{{end_line_select}}">
          <view wx:for="{{lines}}" wx:key="unique">
-            <view class="select_one" catchtap="mySelectStartLine" data-name="{{item}}">{{item}}</view>
+            <view class="select_one" catchtap="mySelectEndLine" data-name="{{item}}">{{item}}</view>
           </view>
        </view>
       </view>
 
-     <view class='start-station' bindtap='bindShowMsgStartStation'>
+     <view class='start-station' bindtap='bindShowMsgEndStation'>
         <text style="margin-left: 10rpx;margin-right: 10rpx;">{{end_station_name}}</text>
        <image class="input-image" src='../../images/input.png'></image>
        <!-- 下拉需要显示的列表 -->
        <view class="select_box" wx:if="{{end_station_select}}">
          <view wx:for="{{stations}}" wx:key="unique">
-            <view class="select_one" catchtap="mySelectStartStation" data-name="{{item}}">{{item}}</view>
+            <view class="select_one" catchtap="mySelectEndStation" data-name="{{item}}">{{item}}</view>
           </view>
         </view>
      </view>
     
    </view>
 
+  </view>
+
+  <!-- 按钮 -->
+  <view class="button-view">
+    <button class="button" hover-class='button-hover' bindtap = 'searchPrice'>
+      <text>查询</text>
+    </button>
+  </view>
+
+  <!-- 文本：票价 -->
+  <view class='price-view'>
+    <text class='other-text'>票价：</text>
+    <text class='price-text'>{{price}}</text>
+    <text class='other-text'>元</text>
   </view>
 
 </view>
