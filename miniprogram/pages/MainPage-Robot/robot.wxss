@@ -44,7 +44,7 @@ page {
   line-height: 7vw;
   padding: 2vw 2.5vw;
   background-color: #444;
-  margin-right: -1.6vw;
+  margin-right: 1.6vw;
   border-radius: 10rpx;
   z-index: 10;
 }

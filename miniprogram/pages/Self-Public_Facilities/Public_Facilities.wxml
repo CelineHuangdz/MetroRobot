@@ -5,8 +5,32 @@
 		<text>公共设施</text>
 	</view>
 
-  <view class="divLine"></view>
+	<view class="divLine"></view>
 
-	
+	<view class="data-view">
+		<scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+			<!-- <view class='scrollMsg'> -->
+			<block wx:key wx:for='{{facilities_data}}' wx:for-index="index">
+
+				<view id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+					<view style='width: 11vw; height: 11vw;'>
+						<image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/problem.png'></image>
+					</view>
+					<view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'></view>
+					<view class='leftMsg'>{{item.problem}}</view>
+				</view>
+
+				<view style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+					<view class='rightMsg'>{{item.answer}}</view>
+					<view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'></view>
+					<view style='width: 11vw; height: 11vw;'>
+						<image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/answer.png'></image>
+					</view>
+				</view>
+
+			</block>
+		</scroll-view>
+
+	</view>
 
 </view>

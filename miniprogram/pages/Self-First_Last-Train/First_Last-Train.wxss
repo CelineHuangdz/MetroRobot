@@ -10,7 +10,8 @@ page{
 
 .title-view{
   font-size: 30px;
-  color: rgb(0, 0, 0);
+  color: #176193d0;
+  font-weight: bold;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
 }

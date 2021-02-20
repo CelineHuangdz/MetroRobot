@@ -10,7 +10,8 @@ page{
 
 .title-view{
   font-size: 30px;
-  color: rgb(0, 0, 0);
+  color: #176193d0;
+  font-weight: bold;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
 }
@@ -22,3 +23,29 @@ page{
   margin-top: 10rpx;
  }
 
+ .data-view{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+ }
+
+ .leftMsg {
+  font-size: 35rpx;
+  color: #176193d0;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #fff;
+  margin-left: -1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}
+
+.rightMsg {
+  font-size: 35rpx;
+  color: #fff;
+  line-height: 7vw;
+  padding: 2vw 2.5vw;
+  background-color: #176193d0;
+  margin-right: 1.6vw;
+  border-radius: 10rpx;
+  z-index: 10;
+}

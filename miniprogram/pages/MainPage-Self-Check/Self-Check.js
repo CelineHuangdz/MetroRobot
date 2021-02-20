@@ -16,7 +16,7 @@ function initData(that) {
 
 Page({
   data: {
-    text: "【公告】已实现功能：需要服务器[票务票价，首末班车]，不需要服务器[天气预报，路线规划，周边查询]；待实现功能：客流情况，公共设施，规章制度",
+    text: "【公告】已实现功能：需要服务器[票务票价，首末班车]，不需要服务器[天气预报，路线规划，周边查询，公共设施]；待实现功能：客流情况，规章制度",
     marqueePace: 1,//滚动速度
     marqueeDistance: 0,//初始滚动距离
     marquee_margin: 50,
@@ -76,8 +76,11 @@ Page({
      else {
       //console.log("替换");
       that.setData({
-        marqueePace: 1,
-        marqueeDistance: 0 // 直接重新滚动
+        marqueePace: 1,//滚动速度
+        marqueeDistance: 0,//初始滚动距离
+        marquee_margin: 50,
+        size:14,
+        interval: 20, // 时间间隔
       });
       clearInterval(interval);
       that.scrolltxt();
