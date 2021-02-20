@@ -8,8 +8,49 @@
 
   <view class="divLine"></view>
   
-  <button class="button" hover-class='button-hover' bindtap = 'gotoSHMetro' data-text = '官网'>
-		<text class='button-text'>跳转到官网</text>
-	</button>
+  <view class="input-part">
+	<view class="start-input">
+
+      <view style="font-weight:bold;">站点:</view>
+
+    <!-- 下拉框 -->
+     <view class='start-line' bindtap='bindShowMsgStartLine'>
+        <text style="margin-left: 10rpx;margin-right: 10rpx;">{{start_line_name}}</text>
+       <image class="input-image" src='../../images/input.png'></image>
+       <!-- 下拉需要显示的列表 -->
+        <view class="select_box" wx:if="{{start_line_select}}">
+         <view wx:for="{{lines}}" wx:key="unique">
+            <view class="select_one" catchtap="mySelectStartLine" data-name="{{item}}">{{item}}</view>
+          </view>
+       </view>
+      </view>
+
+     <view class='start-station' bindtap='bindShowMsgStartStation'>
+        <text style="margin-left: 10rpx;margin-right: 10rpx;">{{start_station_name}}</text>
+       <image class="input-image" src='../../images/input.png'></image>
+       <!-- 下拉需要显示的列表 -->
+       <view class="select_box" wx:if="{{start_station_select}}">
+         <view wx:for="{{stations}}" wx:key="unique">
+            <view class="select_one" catchtap="mySelectStartStation" data-name="{{item}}">{{item}}</view>
+          </view>
+        </view>
+     </view>
+   </view>
+	
+	
+	</view>
+	
+	<!-- 按钮 -->
+  <view class="button-view">
+    <button class="button" hover-class='button-hover' bindtap = 'search'>
+      <text>查询</text>
+    </button>
+  </view>
+
+  <!-- 文本 -->
+  <view class='text-view'>
+		<text style="margin: 10rpx;">{{result}}</text>
+  </view>
+  
 </view>
 
