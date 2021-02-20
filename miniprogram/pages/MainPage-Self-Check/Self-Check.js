@@ -16,7 +16,12 @@ function initData(that) {
 
 Page({
   data: {
-    avatarUrl: '../../images/metro.png',
+    text: "【公告】已实现功能：需要服务器[票务票价，首末班车]，不需要服务器[天气预报，路线规划，周边查询]；待实现功能：客流情况，公共设施，规章制度",
+    marqueePace: 1,//滚动速度
+    marqueeDistance: 0,//初始滚动距离
+    marquee_margin: 50,
+    size:14,
+    interval: 20, // 时间间隔
     problem_items: [
       {
         id:0,
@@ -42,6 +47,47 @@ Page({
   onLoad: function(options) {
     initData(this);
   },
+
+  onShow: function(){
+    var that = this;
+    var length = that.data.text.length * that.data.size;//文字长度
+    var windowWidth = wx.getSystemInfoSync().windowWidth;// 屏幕宽度
+    //console.log(length,windowWidth);
+    that.setData({
+      length: length,
+      windowWidth: windowWidth
+    });
+    that.scrolltxt();// 第一个字消失后立即从右边出现
+  },
+
+  scrolltxt: function () {
+    var that = this;
+    var length = that.data.length;//滚动文字的宽度
+    var windowWidth = that.data.windowWidth;//屏幕宽度
+    if (length > windowWidth){
+     var interval = setInterval(function () {
+     var maxscrollwidth = length + that.data.marquee_margin;//滚动的最大宽度，文字宽度+间距，如果需要一行文字滚完后再显示第二行可以修改marquee_margin值等于windowWidth即可
+     var crentleft = that.data.marqueeDistance;
+     if (crentleft < maxscrollwidth) {//判断是否滚动到最大宽度
+      that.setData({
+      marqueeDistance: crentleft + that.data.marqueePace
+      })
+     }
+     else {
+      //console.log("替换");
+      that.setData({
+        marqueePace: 1,
+        marqueeDistance: 0 // 直接重新滚动
+      });
+      clearInterval(interval);
+      that.scrolltxt();
+     }
+     }, that.data.interval);
+    }
+    else{
+     that.setData({ marquee_margin:"1000"});//只显示一条不滚动右边间距加大，防止重复显示
+    } 
+    },
 
   gotoPage: function(e){
     const text = e.currentTarget.dataset.text;
