@@ -38,6 +38,7 @@ page {
   background:#176193d0;
   line-height:90rpx;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .scroll-container {
