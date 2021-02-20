@@ -8,11 +8,11 @@
 	<view class="divLine"></view>
 
 	<view class="data-view">
-		<scroll-view scroll-y scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+		<scroll-view scroll-y>
 			<!-- <view class='scrollMsg'> -->
-			<block wx:key wx:for='{{facilities_data}}' wx:for-index="index">
+			<block wx:for='{{facilities_data}}' wx:for-index="index">
 
-				<view id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+				<view style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
 					<view style='width: 11vw; height: 11vw;'>
 						<image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='../../images/problem.png'></image>
 					</view>

@@ -1,14 +1,12 @@
 /* miniprogram/pages/Self-Regulations/Regulations.wxss */
 
-page{
+page {
   background: #f1f1f1;
 }
 
-.container{
-  
-}
+.container {}
 
-.title-view{
+.title-view {
   font-size: 30px;
   color: #176193d0;
   font-weight: bold;
@@ -16,9 +14,39 @@ page{
   margin-bottom: 20rpx;
 }
 
-.divLine{
+.divLine {
   background: #E0E3DA;
   width: 100%;
   height: 10rpx;
   margin-top: 10rpx;
- }
+}
+
+.all-text-view {
+  width: 95%;
+  background-color: #176193d0;
+  margin-bottom: 30rpx;
+}
+
+.text-title {
+  font-weight: bold;
+  color: #fff;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-view {
+  width: 100%;
+  color: #fff;
+  margin-top: 25rpx;
+  margin-bottom: 20rpx;
+}
+
+.text-line {
+  margin-top: 25rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  line-height: 30px;
+}

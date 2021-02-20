@@ -5,8 +5,19 @@
 		<text>规章制度</text>
 	</view>
 
-  <view class="divLine"></view>
+	<view class="divLine"></view>
 
-	
+	<view class="all-text-view">
+		<view class="text-title">
+			<text>上海市轨道交通乘客守则</text>
+		</view>
+		<view class="text-view">
+			<block wx:for='{{regulations}}' wx:for-index="index">
+				<view class="text-line">
+					<text>{{item}}</text>
+				</view>
+			</block>
+		</view>
+	</view>
 
 </view>
