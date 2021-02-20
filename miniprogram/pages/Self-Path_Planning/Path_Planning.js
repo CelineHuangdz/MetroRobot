@@ -75,7 +75,7 @@ Page({
     var markers = this.data.markers;
     var points = this.data.points;
     markers.push({
-      id: 0,
+      id: 1,
       longitude: location[0],
       latitude: location[1],
       iconPath: '../../images/navi-e.png',
