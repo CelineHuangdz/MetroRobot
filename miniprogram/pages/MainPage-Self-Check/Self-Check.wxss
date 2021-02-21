@@ -144,17 +144,28 @@ page {
   width: 100%;
   padding-left: 30rpx;
   padding-top: 30rpx;
-  padding-bottom: 30rpx;
+  padding-bottom: 20rpx;
   height: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 .ProblemView {
-  width: 100%;
+  width: 85%;
   height: auto;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 20rpx;
 }
 
 .ProblemText {
   color: #eeeeee;
-  font-size: 40rpx;
+  font-size: 20px;
   flex: 1;
+  
+}
+
+.rightimage{
+  width: 30px;
+  height: 30px;
+  margin-left: 20rpx;
 }

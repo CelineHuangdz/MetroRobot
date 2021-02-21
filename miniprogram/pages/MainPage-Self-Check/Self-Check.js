@@ -1,5 +1,6 @@
 //Self-Check.js
 const app = getApp()
+
 var buttonList = new Array(); 
 buttonList["首末班车"] = "First_Last-Train";
 buttonList["票务票价"] = "TicketPrice";
@@ -10,10 +11,6 @@ buttonList["周边查询"] = "Around";
 buttonList["公共设施"] = "Public_Facilities";
 buttonList["规章制度"] = "Regulations";
 
-function initData(that) {
-  
-}
-
 Page({
   data: {
     text: "【公告】已实现功能：需要服务器[客流情况，票务票价，首末班车，智能客服]，不需要服务器[天气预报，路线规划，周边查询，公共设施，规章制度]；待实现功能：猜你想问",
@@ -22,37 +19,45 @@ Page({
     marquee_margin: 50,
     size:14,
     interval: 30, // 时间间隔
-    problem_items: [
-      {
-        id:0,
-        problem_name:"问题1",
-        pages:[]
-      },
-      {
-        id:1,
-        problem_name:"问题2",
-        pages:[]
-      },
-      {
-        id:2,
-        problem_name:"问题3",
-        pages:[]
-      }
-    ],
+    problem_items: [],
     logged: false,
     takeSession: false,
     requestResult: ''
   },
 
   onLoad: function(options) {
-    initData(this);
+    
   },
 
   onShow: function(){
     var that = this;
     var length = that.data.text.length * that.data.size;//文字长度
     var windowWidth = wx.getSystemInfoSync().windowWidth;// 屏幕宽度
-    //console.log(length,windowWidth);
+
+    const db = wx.cloud.database()
+    db.collection('problem-items').where({
+    })
+    .get({
+      success: function(res) {
+        console.log("查询数据库成功")
+        console.log(res.data)
+        that.setData({
+          length: length,
+          windowWidth: windowWidth,
+          problem_items: res.data
+        });
+        
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询数据库失败'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
+      }
+    })
+
+    //console.log(new Date());
     that.setData({
       length: length,
       windowWidth: windowWidth

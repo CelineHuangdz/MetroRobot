@@ -93,7 +93,12 @@
 
 					<!-- 问题 -->
 					<view class='ProblemView'>
-						<text class='ProblemText'>{{item.problem_name}}</text>
+						<text class='ProblemText'>{{item.problem}}</text>
+					</view>
+
+					<view class="iconView">
+						<image class='rightimage' src="../../images/right.png">
+						</image>
 					</view>
 
 				</view>

@@ -10,6 +10,80 @@ var qqmapsdk = new QQMapWX({
   key:"BGOBZ-TNJCU-CXOVW-4CPDA-AZROZ-FIBLT"
 });
 
+function writeDatabase(pro, ans){
+  const db = wx.cloud.database()
+  db.collection('problem-items').where({
+  })
+  .get({
+    success: function(res) {
+      console.log("查询数据库成功")
+      console.log(res.data)
+      if(res.data.length <= 2){
+        console.log("数据库内数据不足3条，可以直接插入")
+        db.collection('problem-items').add({
+          // data 字段表示需新增的 JSON 数据
+          data: {
+            problem: pro,
+            answer: ans,
+            time: new Date()
+          }
+        })
+        .then(res => {
+          console.log(res)
+        }).cache(err => {
+          //失败的处理
+          console.log("插入失败")
+        })
+      }
+      else{
+        console.log("数据库内数据超过3条，需要更新")
+        //var removeId = findOldestDataId(res.data)
+        var resultTime = new Date()
+        var resultId = ""
+        for(let i=0; i<res.data.length;++i){
+          if(res.data[i].time < resultTime){
+            resultTime = res.data[i].time
+            resultId = res.data[i]._id
+          }
+        }
+        console.log(resultTime)
+        console.log(resultId)
+        db.collection('problem-items').doc(resultId).remove({
+          success: function(res) {
+            console.log("删除成功")
+            console.log(res.data)
+          },
+          fail: err =>{
+            console.log("删除失败")
+            console.log(err)
+          }
+        })
+        db.collection('problem-items').add({
+          // data 字段表示需新增的 JSON 数据
+          data: {
+            problem: pro,
+            answer: ans,
+            time: new Date()
+          }
+        })
+        .then(res => {
+          console.log(res)
+        }).cache(err => {
+          //失败的处理
+          console.log("插入失败")
+        })
+      }
+    },
+    fail: err => {
+      wx.showToast({
+        icon: 'none',
+        title: '查询数据库失败'
+      })
+      console.error('[数据库] [查询记录] 失败：', err)
+    }
+  })
+}
+
 function initData(that) {
   inputVal = '';
 
@@ -119,7 +193,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    //writeDatabase("pro-test", "ans-test")
   },
 
   /**
@@ -435,6 +509,7 @@ Page({
                         success: res => {
                           console.log(res);
                           var content = "最快路线中，轨道交通路段的价格为：" + String(res.data.totalPrice) + "元"
+                          writeDatabase(e.detail.value, content)
                           msgList.push({
                             speaker: 'server',
                             contentType: 'text',
@@ -533,6 +608,7 @@ Page({
                         success: res => {
                           console.log(res.data);
                           var content = "最快路线中，轨道交通路段的价格为：" + String(res.data.totalPrice) + "元"
+                          writeDatabase(e.detail.value, content)
                           msgList.push({
                             speaker: 'server',
                             contentType: 'text',
@@ -649,6 +725,7 @@ Page({
                           }
                         }
                       }
+                      writeDatabase(e.detail.value, content)
                       msgList.push({
                         speaker: 'server',
                         contentType: 'text',
@@ -756,6 +833,7 @@ Page({
                               }
                               content_this = content_this + "\n "
                             }
+                            writeDatabase(e.detail.value, content_this)
                             msgList.push({
                               speaker: 'server',
                               contentType: 'text',
@@ -978,6 +1056,7 @@ Page({
                             content = content + res.data.train_name[i] + res.data.start_station[i] + "方向的载客率为" + res.data.load_ratio_up[i] + "\n "
                           }
                         }
+                        writeDatabase(e.detail.value, content)
                         msgList.push({
                           speaker: 'server',
                           contentType: 'text',
@@ -1271,10 +1350,13 @@ Page({
                    },
                   success:res=>{
                     console.log(res)
+                    var content_this = "当前地点" + '的经纬度：'+location_lola+' \n 该地点天气情况如下：\n '+' 天气状况：'+res.data.now.text+' \n 当前温度：'+res.data.now.temp+'℃ \n 体感温度：'+res.data.now.feelsLike+'℃ \n 相对湿度：'+res.data.now.humidity+'% \n 风向：'+res.data.now.windDir+' \n 能见度：'+res.data.now.vis+'m'
+                    writeDatabase(e.detail.value, content_this)
                     msgList.push({
                       speaker: 'server',
                       contentType: 'text',
-                      content:"当前地点" + '的经纬度：'+location_lola+' \n 该地点天气情况如下：\n '+' 天气状况：'+res.data.now.text+' \n 当前温度：'+res.data.now.temp+'℃ \n 体感温度：'+res.data.now.feelsLike+'℃ \n 相对湿度：'+res.data.now.humidity+'% \n 风向：'+res.data.now.windDir+' \n 能见度：'+res.data.now.vis+'m' })
+                      content: content_this
+                    })
                     send_msg_field.setData({
                       msgList,
                       inputVal,
@@ -1343,6 +1425,7 @@ Page({
                 content = content + sec_item[i] + "可以携带入内\n"
               }
             }
+            writeDatabase(e.detail.value, content)
             msgList.push({
               speaker: 'server',
               contentType: 'text',
