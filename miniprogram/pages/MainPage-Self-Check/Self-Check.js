@@ -22,7 +22,8 @@ Page({
     problem_items: [],
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    isShow:false
   },
 
   onLoad: function(options) {
@@ -100,7 +101,27 @@ Page({
     wx.navigateTo({
       url: url, 
     })
-  }
+  },
 
+  toastShow:function(str){
+    var _this = this;
+    _this.setData({
+        isShow: true,
+        txt: str
+    });
+    setTimeout(function () {    //toast消失
+        _this.setData({
+            isShow: false
+        });
+    }, 2000);  
+},
+
+  answerProblem: function(e){
+    var problemSelect = e.currentTarget.dataset.name
+    var answerSelect = e.currentTarget.dataset.ans
+    console.log(problemSelect)
+    console.log(answerSelect)
+    this.toastShow(answerSelect);
+  }
 
 })

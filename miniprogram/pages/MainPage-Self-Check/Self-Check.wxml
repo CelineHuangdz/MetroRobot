@@ -1,4 +1,8 @@
 <!--index.wxml-->
+<import src="../../public/html/template.wxml" />
+
+<template is="toast" data="{{txt,isShow}}"></template>
+
 <view class="container">
 
 	<!-- metro.jpg -->
@@ -89,7 +93,7 @@
 		<view class="fast-answer-list">
 			<block wx:for="{{problem_items}}">
 				<!-- 每个cell -->
-				<view class='problem-item' wx:key="{{item.id}}">
+				<view class='problem-item' wx:key="{{item.id}}" bindtap='answerProblem' data-name="{{item.problem}}" data-ans="{{item.answer}}">
 
 					<!-- 问题 -->
 					<view class='ProblemView'>
