@@ -13,5 +13,9 @@ App({
         traceUser: true,
       })
     }
+    
+  },
+  onShow: function(){
+    
   }
 })

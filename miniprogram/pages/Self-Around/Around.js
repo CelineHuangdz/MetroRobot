@@ -63,7 +63,28 @@ Page({
     points: [],
     location: '',
     name:'',
-    address: ''
+    address: '',
+    layerModel: false
+  },
+  changeModalCancel: function() {
+    console.log('取消授权');
+    wx.showModal({
+      title: '提示',
+      content: '您已取消授权，即将跳转回主页面......',
+      success: function (res) {
+          if (res.confirm) {
+              console.log('用户点击确定')
+              wx.reLaunch({
+                url: '../MainPage-Self-Check/Self-Check',
+              })
+          }else{
+             console.log('用户点击取消')
+             wx.reLaunch({
+              url: '../MainPage-Self-Check/Self-Check',
+            })
+          }
+      }
+  })
   },
   onLoad: function () {
     // 页面加载获取当前定位位置为地图的中心坐标
@@ -81,11 +102,55 @@ Page({
               iconPath: '../../images/location.png',
               width: 50,
               height: 50
-            }]
+            }],
+            layerModel: false
           });
         }
       }
     });
+  },
+  onShow: function(){
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userLocation']) {
+          // 已经授权
+          console.log("已经授权地址信息")
+          var _this = this;
+    wx.getLocation({
+      success(data) {
+        if (data) {
+          _this.setData({
+            latitude: data.latitude,
+            longitude: data.longitude,
+            markers:[{
+              id:0,
+              latitude: data.latitude,
+              longitude: data.longitude,
+              iconPath: '../../images/location.png',
+              width: 50,
+              height: 50
+            }],
+            layerModel: false
+          });
+        }
+      }
+    });
+        }else{
+          // 未授权，跳转到授权页面
+          console.log("还没有授权地址信息")
+          wx.getSetting({
+            success: (res) => {
+              if (!res.authSetting['scope.userLocation']) {
+              //打开提示框，提示前往设置页面
+                this.setData({
+                  layerModel: true
+                })
+              }
+            }
+          })
+        }
+      }
+    })
   },
   getType(e) {//获取选择的附近关键词，同时更新状态
     this.setData({ status: e.currentTarget.dataset.type})

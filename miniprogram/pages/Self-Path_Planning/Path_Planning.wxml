@@ -8,6 +8,20 @@
 <view class="map-inputtips-input">
   <input bindinput="bindInput" placeholder="输入终点" focus="true" />
 </view>
+
+<view  wx:if="{{layerModel}}" class="modal-mask">
+    <view class="modal-dialog">
+      <view class="modal-title">温馨提示</view>
+      <view class="modal-content">
+        获取定位失败，请前往设置打开定位权限
+      </view>
+      <view class="modal-footer">
+        <view class="btn-cancel" catchtap="changeModalCancel">取消</view>
+        <button open-type="openSetting" class="btn-confirm" catchtap="changeModalSet">设置</button>
+      </view>
+    </view>
+  </view>
+
 <view class="map-search-list">
 	<view wx:if="{{isShow}}">
   	<view bindtouchstart="bindSearch" wx:key="searchId" data-keywords="{{item.name}}" data-location="{{item.location}}" class="map-box" wx:for="{{tips}}">

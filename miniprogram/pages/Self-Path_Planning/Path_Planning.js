@@ -16,9 +16,30 @@ Page({
     cost: '',
     city: '',
     tips: {},
-    polyline: []
+    polyline: [],
+    layerModel: false
   },
-  onLoad() {
+  changeModalCancel: function() {
+    console.log('取消授权');
+    wx.showModal({
+      title: '提示',
+      content: '您已取消授权，即将跳转回主页面......',
+      success: function (res) {
+          if (res.confirm) {
+              console.log('用户点击确定')
+              wx.reLaunch({
+                url: '../MainPage-Self-Check/Self-Check',
+              })
+          }else{
+             console.log('用户点击取消')
+             wx.reLaunch({
+              url: '../MainPage-Self-Check/Self-Check',
+            })
+          }
+      }
+  })
+  },
+  onLoad: function() {
     var _this = this;
     wx.getLocation({
       success: function (res) {
@@ -37,12 +58,61 @@ Page({
               iconPath: '../../images/navi-s.png',
               width: 32,
               height: 32
-            }]
+            }],
+            layerModel: false
           })
         }
       }
     })
   },
+  onShow: function(){
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userLocation']) {
+          // 已经授权
+          console.log("已经授权地址信息")
+          var _this = this;
+    wx.getLocation({
+      success: function (res) {
+        if (res && res.longitude) {
+          _this.setData({
+            longitude: res.longitude,
+            latitude: res.latitude,
+            points: [{
+              longitude: res.longitude,
+              latitude: res.latitude
+            }],
+            markers: [{
+              id: 0,
+              longitude: res.longitude,
+              latitude: res.latitude,
+              iconPath: '../../images/navi-s.png',
+              width: 32,
+              height: 32
+            }],
+            layerModel: false
+          })
+        }
+      }
+    })
+        }else{
+          // 未授权，跳转到授权页面
+          console.log("还没有授权地址信息")
+          wx.getSetting({
+            success: (res) => {
+              if (!res.authSetting['scope.userLocation']) {
+              //打开提示框，提示前往设置页面
+                this.setData({
+                  layerModel: true
+                })
+              }
+            }
+          })
+        }
+      }
+    })
+  },
+
   bindInput: function (e) {
     var _this = this;
     var keywords = e.detail.value;

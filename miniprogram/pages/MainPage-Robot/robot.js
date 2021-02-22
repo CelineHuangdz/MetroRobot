@@ -1114,6 +1114,7 @@ Page({
                       content = content + res.data.train_name[i] + res.data.start_station[i] + "方向的载客率为" + res.data.load_ratio_up[i] + "\n "
                     }
                   }
+                  writeDatabase(e.detail.value, content)
                   msgList.push({
                     speaker: 'server',
                     contentType: 'text',

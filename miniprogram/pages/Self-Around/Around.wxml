@@ -1,5 +1,18 @@
 <!--miniprogram/pages/Self-Around/Around.wxml-->
 <view class="map_container">
+<view  wx:if="{{layerModel}}" class="modal-mask">
+    <view class="modal-dialog">
+      <view class="modal-title">温馨提示</view>
+      <view class="modal-content">
+        获取定位失败，请前往设置打开定位权限
+      </view>
+      <view class="modal-footer">
+        <view class="btn-cancel" catchtap="changeModalCancel">取消</view>
+        <button open-type="openSetting" class="btn-confirm" catchtap="changeModalSet">设置</button>
+      </view>
+    </view>
+  </view>
+
   <map class="map" longitude="{{longitude}}" latitude="{{latitude}}" include-points="{{points}}" markers='{{markers}}'>
 	  <cover-view class="map-tab-bar">
 	    <cover-view class="map-tab-li {{item.id == status ? 'active' : ''}}" bindtap="getType" data-type="{{item.id}}" wx:key="aroundListId" wx:for="{{aroundList}}">{{item.name}}</cover-view>
